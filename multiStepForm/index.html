@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     
+        #pg2 {
+            display: none;
+        }
+
+        #pg3 {
+            display: none;
+        }
+
+        #end {
+            display: none;
+        }
+
+        /* .pg{
+            height: 220px;
+            width: 250px;
+            
+        } */
+        #pg1 {
+            padding: 30px;
+            border: 2px solid black;
+            font-size: x-large;
+            width: 400px;
+        }
+
+        .newdiv {
+            padding: 30px;
+            border: 2px solid black;
+            font-size: x-large;
+            width: 500px;
+            height: 300px;
+        }
+      #thnk{
+        border: 2px solid black;
+        margin: 100px 0;
+        padding: 100px 0 0 0;
+          border-radius: 30px;        
+        width: 400px;
+        height: 250px;
+      }
+
+        button {
+            width: 200px;
+            height: 30px;
+            background: rgb(36, 74, 197);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+
+        <form>
+            <center>
+                <h1 style="color: blue; margin: 50px 0;">Registration Form <br></h1>
+            </center>
+            <div id="pg1" class="pg">
+                <h3>User info.</h3>
+                <label>First Name</label>
+                <input type="text"> <br> <br>
+                <span></span>
+                <label>Last Name</label>
+                <input type="text"> <br> <br>
+                <span></span>
+
+                <button id="btn1">Next</button>
+            </div>
+
+            <div id="pg2" class="pg">
+                <div class="newdiv">
+                    <h3>personal Details</h3>
+                <label>Father Name</label>
+                <input type="text"> <br> <br>
+
+
+                <label>Mother Name</label>
+                <input type="text"> <br> <br>
+
+
+
+                <button id="btnP1">Prev.</button>
+                <button id="btn2">Next</button>
+
+                </div>
+            </div>
+
+
+            <div id="pg3" class="pg">
+           <div class="newdiv" >
+            <h3>Residential Status</h3>
+            <label>Address</label>
+            <input type="text"> <br> <br>
+            <span></span>
+
+            <label>City &emsp; &nbsp;</label>
+            <input type="text"> <br> <br>
+            <span></span>
+
+            <label>Pin code</label>
+            <input type="number"> <br> <br>
+            <span></span>
+
+
+            <button id="btnP2">Prev.</button>
+            <button id="submit">Submit</button>
+
+           </div>
+
+            </div>
+
+
+            <div id="end" class="pg">
+                <div id="thnk">
+                    <center>
+                        <h2>Thankyou..</h2>
+                        <h4>Your Information has been submitted successfully</h4>
+                    </center>
+                </div>
+            </div>
+        </form>
+    </center>
+
+
+
+    <script>
+
+        // pg1
+        let btn = document.querySelector('#btn1').addEventListener('click', function (e) {
+            e.preventDefault();
+            let pg1 = document.querySelector('#pg1').style.display = 'none';
+            let pg2 = document.querySelector('#pg2').style.display = 'inline';
+
+
+        })
+
+        // pg2 
+        let btn2 = document.querySelector('#btn2').addEventListener('click', function (e) {
+            e.preventDefault();
+            let pg2 = document.querySelector('#pg2').style.display = 'none';
+            let pg3 = document.querySelector('#pg3').style.display = 'inline';
+        })
+
+
+        // pg3 
+        let submit = document.querySelector('#submit').addEventListener('click', function (e) {
+            e.preventDefault();
+            let pg3 = document.querySelector('#pg3').style.display = 'none';
+            let endNote = document.querySelector('#end').style.display = 'inline';
+        })
+
+
+    </script>
+
+
+</body>
+
+</html>
